@@ -19,7 +19,7 @@ import { MotionReveal } from "@/components/ui/MotionReveal";
 
 export function HeroSection() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-[#1F2E2B] via-[#264640] to-[#1C3E38] text-white pt-12 pb-16 lg:pt-16 lg:pb-24 border-b border-[#264640]/40">
+    <section className="relative overflow-hidden bg-gradient-to-br from-[#1F2E2B] via-[#264640] to-[#1C3E38] text-white pt-28 sm:pt-32 lg:pt-36 pb-16 lg:pb-24 border-b border-[#264640]/40">
       {/* Ambient background glow accents */}
       <div
         className="absolute top-0 right-1/3 h-96 w-96 rounded-full bg-[#DCE5DE]/10 blur-3xl pointer-events-none"
@@ -31,7 +31,7 @@ export function HeroSection() {
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-start">
           
           {/* Left Column: Headline, Subtitle, and CTAs */}
           <div className="lg:col-span-6 space-y-6">
@@ -109,7 +109,7 @@ export function HeroSection() {
           </div>
 
           {/* Right Column: Asset Image with Floating Transparent Glass Cards */}
-          <div className="lg:col-span-6 relative pt-4 sm:pt-0">
+          <div className="lg:col-span-6 relative">
             <MotionReveal delay={200} duration={800} distance={25}>
               <div className="relative mx-auto max-w-lg lg:max-w-none pb-8 sm:pb-20">
                 
@@ -145,8 +145,8 @@ export function HeroSection() {
                   </p>
                 </div>
 
-                {/* Floating Glass Card 2: Mid-Left Pill (Virtual Care Team) */}
-                <div className="hidden sm:flex absolute top-1/3 -left-4 sm:-left-6 z-20 bg-white/25 backdrop-blur-md border border-white/40 rounded-2xl p-2.5 shadow-xl items-center gap-2.5 text-white">
+                {/* Floating Glass Card 2: Upper-Left Pill (Virtual Care Team - positioned above head) */}
+                <div className="hidden sm:flex absolute top-10 sm:top-12 -left-4 sm:-left-6 z-20 bg-white/25 backdrop-blur-md border border-white/40 rounded-2xl p-2.5 shadow-xl items-center gap-2.5 text-white">
                   <div className="h-9 w-9 rounded-xl bg-white text-[#264640] flex items-center justify-center shadow-sm shrink-0">
                     <Video className="h-4 w-4" />
                   </div>
