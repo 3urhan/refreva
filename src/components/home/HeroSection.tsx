@@ -19,7 +19,7 @@ import { MotionReveal } from "@/components/ui/MotionReveal";
 
 export function HeroSection() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-[#1F2E2B] via-[#264640] to-[#1C3E38] text-white py-14 lg:py-20 border-b border-[#264640]/40">
+    <section className="relative overflow-hidden bg-gradient-to-br from-[#1F2E2B] via-[#264640] to-[#1C3E38] text-white pt-12 pb-16 lg:pt-16 lg:pb-24 border-b border-[#264640]/40">
       {/* Ambient background glow accents */}
       <div
         className="absolute top-0 right-1/3 h-96 w-96 rounded-full bg-[#DCE5DE]/10 blur-3xl pointer-events-none"
@@ -111,7 +111,7 @@ export function HeroSection() {
           {/* Right Column: Asset Image with Floating Transparent Glass Cards */}
           <div className="lg:col-span-6 relative pt-4 sm:pt-0">
             <MotionReveal delay={200} duration={800} distance={25}>
-              <div className="relative mx-auto max-w-lg lg:max-w-none pb-8 sm:pb-12">
+              <div className="relative mx-auto max-w-lg lg:max-w-none pb-8 sm:pb-20">
                 
                 {/* Main Image Frame using our community conversation asset (NOT a single person) */}
                 <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-white/20 aspect-[4/3] sm:aspect-[16/11]">
@@ -160,8 +160,8 @@ export function HeroSection() {
                   </div>
                 </div>
 
-                {/* Floating Glass Card 3: Transparent Search / Quick Intake Card (Bottom Right) */}
-                <div className="mt-4 sm:mt-0 sm:absolute sm:-bottom-4 sm:right-2 sm:left-auto z-20 w-full sm:max-w-xs md:max-w-sm rounded-3xl bg-white/25 backdrop-blur-xl border border-white/40 p-4 sm:p-5 shadow-2xl space-y-2.5 text-[#1F2E2B]">
+                {/* Floating Glass Card 3: Transparent Search / Quick Intake Card (Bottom Right - Moved Downward) */}
+                <div className="mt-4 sm:mt-0 sm:absolute sm:-bottom-12 sm:right-2 sm:left-auto z-20 w-full sm:max-w-xs md:max-w-sm rounded-3xl bg-white/25 backdrop-blur-xl border border-white/40 p-4 sm:p-5 shadow-2xl space-y-2.5 text-[#1F2E2B]">
                   
                   <div className="flex items-center justify-between text-xs font-semibold text-white mb-1">
                     <div className="flex items-center gap-1.5">
