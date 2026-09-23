@@ -31,6 +31,9 @@ export const metadata: Metadata = {
     default: "Refreva — Therapy & Counseling Practice in Virginia",
     template: "%s | Refreva Therapy Virginia",
   },
+  icons: {
+    icon: "/favicon.svg",
+  },
   description:
     "Grounded, compassionate psychotherapy and counseling services for adults across Virginia. Offering thoughtful in-person care and statewide secure telehealth appointments.",
   keywords: [

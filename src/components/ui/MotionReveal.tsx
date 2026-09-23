@@ -26,16 +26,21 @@ export function MotionReveal({
   const [isVisible, setIsVisible] = React.useState(false);
   const ref = React.useRef<HTMLDivElement>(null);
 
+  const prefersReducedMotion = React.useSyncExternalStore(
+    (notify) => {
+      if (typeof window === "undefined") return () => {};
+      const media = window.matchMedia("(prefers-reduced-motion: reduce)");
+      media.addEventListener("change", notify);
+      return () => media.removeEventListener("change", notify);
+    },
+    () => (typeof window !== "undefined" ? window.matchMedia("(prefers-reduced-motion: reduce)").matches : false),
+    () => false
+  );
+
   React.useEffect(() => {
+    if (prefersReducedMotion) return;
     const node = ref.current;
     if (!node) return;
-
-    // Check if user prefers reduced motion
-    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (prefersReducedMotion) {
-      setIsVisible(true);
-      return;
-    }
 
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -55,7 +60,9 @@ export function MotionReveal({
     return () => {
       observer.disconnect();
     };
-  }, [threshold]);
+  }, [threshold, prefersReducedMotion]);
+
+  const shown = prefersReducedMotion || isVisible;
 
   const getInitialTransform = () => {
     if (direction === "up") return `translateY(${distance}px)`;
@@ -64,8 +71,8 @@ export function MotionReveal({
   };
 
   const style: React.CSSProperties = {
-    opacity: isVisible ? 1 : 0,
-    transform: isVisible ? "translateY(0)" : getInitialTransform(),
+    opacity: shown ? 1 : 0,
+    transform: shown ? "translateY(0)" : getInitialTransform(),
     transitionProperty: "opacity, transform",
     transitionDuration: `${duration}ms`,
     transitionDelay: `${delay}ms`,

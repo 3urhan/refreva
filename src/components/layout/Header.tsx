@@ -8,9 +8,7 @@ import {
   ChevronDown, 
   Menu, 
   X, 
-  Calendar, 
-  ArrowRight,
-  ShieldCheck 
+  Calendar
 } from "lucide-react";
 import { SITE_CONFIG } from "@/lib/site-config";
 import { cn } from "@/lib/utils";
@@ -19,6 +17,14 @@ export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
   const [isScrolled, setIsScrolled] = React.useState(false);
   const pathname = usePathname();
+  const [prevPathname, setPrevPathname] = React.useState(pathname);
+
+  // Close mobile menu on page transition
+  if (prevPathname !== pathname) {
+    setPrevPathname(pathname);
+    setMobileMenuOpen(false);
+  }
+
   const isHome = pathname === "/";
 
   // Detect scroll to adjust floating pill elevation
@@ -29,11 +35,6 @@ export function Header() {
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  // Close mobile menu on page transition
-  React.useEffect(() => {
-    setMobileMenuOpen(false);
-  }, [pathname]);
 
   // Lock body scroll when mobile menu is open
   React.useEffect(() => {
