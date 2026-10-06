@@ -6,11 +6,17 @@ import { MotionReveal } from "@/components/ui/MotionReveal";
 
 export function InsurancePricingSection() {
   const insuranceNetworks = [
-    { name: "Anthem Blue Cross", type: "In-Network" },
-    { name: "Aetna Health", type: "In-Network" },
-    { name: "Cigna / Evernorth", type: "In-Network" },
-    { name: "Optum / UnitedHealthcare", type: "In-Network" },
-    { name: "Medicare Part B", type: "In-Network" },
+    { name: "Medicare", type: "In-Network" },
+    { name: "Medicaid", type: "In-Network" },
+    { name: "Aetna", type: "In-Network" },
+    { name: "UHC", type: "In-Network" },
+    { name: "CareFirst", type: "In-Network" },
+    { name: "Aetna Better Health", type: "In-Network" },
+    { name: "Carelon", type: "In-Network" },
+    { name: "Meritain Health Plan", type: "In-Network" },
+    { name: "My Physician Plan", type: "In-Network" },
+    { name: "Innovation Health", type: "In-Network" },
+    { name: "Sentara Health", type: "In-Network" },
     { name: "HSA & FSA Eligible", type: "Accepted" },
   ];
 

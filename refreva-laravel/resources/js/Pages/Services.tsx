@@ -117,11 +117,11 @@ export default function Services() {
                     {/* Right Column: CTA Link */}
                     <div className="md:col-span-3 flex md:justify-end items-center md:items-start pt-2 md:pt-6">
                       <Link
-                        href="/schedule"
+                        href={`/services/${service.slug}`}
                         className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#264640] hover:text-[#966F33] transition-colors group"
                       >
                         <span className="border-b border-[#264640]/40 group-hover:border-[#966F33]">
-                          Request this service
+                          Learn more
                         </span>
                         <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                       </Link>

@@ -84,7 +84,16 @@ export default function Privacy() {
 
             <section className="space-y-3">
               <h2 className="text-xl font-serif text-[#1F2E2B] font-semibold">
-                6. Contact Regarding Privacy
+                6. SMS/Text Messaging Communications & Consent
+              </h2>
+              <p>
+                By providing your phone number, you explicitly consent to receive SMS/text messages from {SITE_CONFIG.practiceName} regarding appointment reminders, scheduling updates, and administrative communications. <strong>Consent to receive text messages is not a condition of receiving treatment or purchasing any services.</strong> You may opt out of receiving these messages at any time by replying "STOP" to any text message you receive from us. For assistance, reply "HELP". <strong>Message frequency varies. Message and data rates may apply.</strong> We will never share, sell, or distribute your phone number or SMS opt-in data to third parties for marketing or promotional purposes. For more information, please review our Terms of Service.
+              </p>
+            </section>
+
+            <section className="space-y-3">
+              <h2 className="text-xl font-serif text-[#1F2E2B] font-semibold">
+                7. Contact Regarding Privacy
               </h2>
               <p>
                 If you have any questions about this Privacy Policy or wish to review the administrative information you submitted, please contact us at:

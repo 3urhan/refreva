@@ -95,7 +95,7 @@ export function ServicesGrid() {
                       href={`/services/${service.slug}`}
                       className="inline-flex items-center justify-between w-full text-xs font-semibold text-[#264640] hover:text-[#966F33] transition-colors"
                     >
-                      <span>Explore this service</span>
+                      <span>Learn more</span>
                       <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
                     </Link>
                   </div>

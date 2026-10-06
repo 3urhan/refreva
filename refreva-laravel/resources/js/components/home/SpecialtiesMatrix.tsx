@@ -143,8 +143,9 @@ export function SpecialtiesMatrix() {
           {track1Extended.map((item, idx) => {
             const Icon = item.icon;
             return (
-              <div
+              <Link
                 key={idx}
+                href="/services"
                 className="w-80 sm:w-88 shrink-0 p-5 rounded-2xl bg-white border border-[#E6E1D9] shadow-sm hover:shadow-xl hover:border-[#264640]/40 transition-all duration-300 hover:scale-[1.02] flex flex-col justify-between group cursor-pointer"
               >
                 <div className="space-y-2.5">
@@ -170,7 +171,7 @@ export function SpecialtiesMatrix() {
                   <span>Explore specialized care</span>
                   <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
                 </div>
-              </div>
+              </Link>
             );
           })}
         </div>
@@ -180,8 +181,9 @@ export function SpecialtiesMatrix() {
           {track2Extended.map((item, idx) => {
             const Icon = item.icon;
             return (
-              <div
+              <Link
                 key={idx}
+                href="/services"
                 className="w-80 sm:w-88 shrink-0 p-5 rounded-2xl bg-white border border-[#E6E1D9] shadow-sm hover:shadow-xl hover:border-[#264640]/40 transition-all duration-300 hover:scale-[1.02] flex flex-col justify-between group cursor-pointer"
               >
                 <div className="space-y-2.5">
@@ -207,7 +209,7 @@ export function SpecialtiesMatrix() {
                   <span>Explore specialized care</span>
                   <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
                 </div>
-              </div>
+              </Link>
             );
           })}
         </div>

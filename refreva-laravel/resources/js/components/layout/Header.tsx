@@ -119,14 +119,13 @@ export function Header() {
             <Link
               href="/services"
               className={cn(
-                "text-sm font-medium transition-colors hover:text-[#264640] flex items-center gap-1",
+                "text-sm font-medium transition-colors hover:text-[#264640]",
                 pathname.startsWith("/services") && pathname !== "/services/telehealth"
                   ? "text-[#264640] font-semibold"
                   : "text-[#53625E]"
               )}
             >
-              <span>Services</span>
-              <ChevronDown className="h-3.5 w-3.5 opacity-60" />
+              Services
             </Link>
 
             <Link
